@@ -1,0 +1,134 @@
+// Footer stuff
+.footer-items-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+.item-list{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    li{
+        width: 30px;
+        cursor: pointer;
+        @include responsive($sm){
+            width: 20px;
+        }
+    }
+}
+#infoBtn{
+    margin-left: 20px;
+}
+.company-logo{
+    width: 160px;
+    padding: 5px 0;
+    @include responsive($sm){
+        align-self: end;
+        width: 100px;
+    }
+}
+
+// Modal element(Embed and Info) parts
+
+.modal-wrapper{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,.5);
+    display: none;
+}
+.modal-unit{
+    width: 500px;
+    background: $white;
+    position: absolute;
+    padding: 25px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: max-content;
+    @include responsive($sm){
+        width: 70%; 
+    }
+}
+.modal-header{
+    display: flex;
+    justify-content: space-between;
+    h1{
+        margin: 0;
+        font-family: Oswald-SemiBold, sans-serif;
+        text-transform: uppercase;
+    }
+    img{
+        width: 25px;
+        align-self: start;
+        cursor: pointer;
+        @include responsive($sm){
+            width: 20px; 
+        }
+    }
+}
+//Embed element  
+#embedCode{
+    width: 455px;
+    background-color: $dark-gray;
+    font-size: .8em;
+    padding: 20px;
+    width: auto;
+    word-break: break-all;
+    @include responsive($sm){
+        font-size: .5em;
+        padding: 10px;
+    }
+}
+.embed-text{
+    margin: 5px 0 15px;
+    font-size: .8em;
+}
+.copy-button-wrapper{
+    display: flex;
+    justify-content: end;
+    margin-top: 10px;
+}
+#copyBtn{
+    border: none;
+    color: $white;
+    background-color: $black;
+    padding: 6px 20px;
+    text-transform: uppercase;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .3s all ease;
+}
+#copyBtn:hover{
+    background: $dark-black;
+}
+#copyBtn:focus{
+    background: #000;
+}
+#coppiedPopup{
+    margin: 0;
+    padding: 7px 5px;
+    font-size: 0.7em;
+    display: none;
+    color: $green;
+}
+
+//Info element
+.info-body{
+    h2{
+        font-family: Oswald-SemiBold, sans-serif;
+        margin: 15px 0 10px;
+    }
+    p{
+        margin: 0;
+        user-select: none;
+        line-height: 1.3em;
+        a{
+            text-decoration: none;
+        }
+    }
+}

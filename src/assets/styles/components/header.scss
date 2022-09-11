@@ -1,0 +1,20 @@
+.logo-wrapper{
+    background-image: url(../images/headerLabtopLogo.svg);
+    background-position: left;
+    background-size: cover;
+    height: 210px;
+    background-repeat: no-repeat;
+    @include responsive($md){
+        height: 195px;
+    }
+    @include responsive($sm){
+        background-image: url(../images/headerPhoneLogo.svg);
+        background-size: contain;
+        height: 120px;
+    }
+}
+.about-table{
+    p{
+        line-height: 1.5em;
+    }
+}

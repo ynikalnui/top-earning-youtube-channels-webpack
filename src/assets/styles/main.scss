@@ -1,0 +1,13 @@
+// Normalise
+@import "./vendor/_normalise.scss";
+
+// Base
+@import "./base/fonts.scss";
+@import "./base/variables.scss";
+@import "./base/mixins.scss";
+@import "./base/mainComponents.scss";
+
+// Components
+@import "./components/header.scss";
+@import "./components/table.scss";
+@import "./components/footer.scss";

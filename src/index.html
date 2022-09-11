@@ -1,0 +1,56 @@
+<html lang="ua" xmlns="http://www.w3.org/1999/html">
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129694306-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-129694306-2');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <meta name="robots" content="index, follow">
+  <meta name="keywords" content="бразильское джиу-джитсу, бразильское джиу джитсу, бразильское джиу-джитсу николаев, бразильское джиу джитсу николаев, бжж, бжж николаев, bjj, bjj николаев, predators">
+
+  <!-- Primary Meta Tags -->
+  <title><%= htmlWebpackPlugin.options.title %></title>
+  <meta name="title" content="Бразильське джиу-джитсу м.Миколаїв PREDATORS TEAM">
+  <meta name="description" content="Бразильське джиу-джитсу м.Миколаїв PREDATORS team, набір спортсменів, тренування, участь у змаганнях, виховання чемпіонів">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://predators.com.ua">
+  <meta property="og:title" content="Бразильське джиу-джитсу м.Миколаїв PREDATORS TEAM">
+  <meta property="og:description" content="Бразильське джиу-джитсу м.Миколаїв PREDATORS team, набір спортсменів, тренування, участь у змаганнях, виховання чемпіонів">
+  <meta property="og:image" content="http://predators.com.ua/img/logo-1200x630.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="http://predators.com.ua/img/logo-1200x630.png">
+  <meta property="twitter:url" content="http://predators.com.ua">
+  <meta property="twitter:title" content="Бразильське джиу-джитсу м.Миколаїв PREDATORS TEAM">
+  <meta property="twitter:description" content="Бразильськое джиу-джитсу г.Николаев PREDATORS team, набор спортсменов, тренировки, участие в соревнованиях, воспитание чемпионов">
+  <meta property="twitter:image" content="http://predators.com.ua/img/logo-1200x630.png">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+  <link rel="mask-icon" href="./assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="./assets/favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="./assets/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+</head>
+<body data-lang="ua">
+  <!-- Import header -->
+  <%= require('html-loader!./assets/parts/header.html').default %>
+  <!-- Import table -->
+  <%= require('html-loader!./assets/parts/table.html').default %>
+  <!-- Import footer -->
+  <%= require('html-loader!./assets/parts/footer.html').default %>
+</body>
+</html>

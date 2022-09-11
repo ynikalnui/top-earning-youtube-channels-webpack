@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="table-wrapper">
+        <!-- Table nav(search input and switch categoty buttons) -->
+        <div class="table-nav">
+            <div class="search-input">
+                <input type="text" id="search" placeholder="Search">
+            </div>
+            <div class="category-switch-buttons" id="switchButtons">
+                <button id="overallBtn" class="activeMode" data-field="Overall">Overall</button>
+                <button id="gamingBtn" data-field="Gaming">Gaming</button>
+                <button id="kidsBtn" data-field="Kids">Kids</button>
+            </div>
+        </div>
+        <!-- Main table -->
+        <table id="tableData">
+            <thead>
+                <tr>
+                    <th class="width-sm"><div id="countryCol" class="table-title" data-field="country">Country</div></th>
+                    <th><div id="youtuberCol" class="table-title" data-field="topYoutuber">Top Youtuber</div></th>
+                    <th class="hidden-sm" noSort><div id="categoryCol" data-field="category">Category</div></th>
+                    <th class="earnings-col"><div id="earningsCol" class="table-title sort-asc" data-field="earnings"><p>Estimated Lifetime Earnings</p></div></th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <div id="btnShowHide">Show More</div>
+</div>

@@ -1,0 +1,170 @@
+// Table stuff
+.table-wrapper{
+    width: 100%;
+}
+.table-nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    flex-wrap: wrap;
+}
+.search-input{
+    width: 200px;
+    input{
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNS45NyAxNS45NyI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOm5vbmU7c3Ryb2tlOiMyODI4Mjg7c3Ryb2tlLW1pdGVybGltaXQ6MTA7c3Ryb2tlLXdpZHRoOjJweDt9PC9zdHlsZT48L2RlZnM+PGcgaWQ9ItCh0LvQvtC5XzIiIGRhdGEtbmFtZT0i0KHQu9C+0LkgMiI+PGcgaWQ9InRleHQiPjxjaXJjbGUgY2xhc3M9ImNscy0xIiBjeD0iNi41NiIgY3k9IjYuNTYiIHI9IjUuNTYiLz48bGluZSBjbGFzcz0iY2xzLTEiIHgxPSIxMC41IiB5MT0iMTAuNSIgeDI9IjE1LjI2IiB5Mj0iMTUuMjYiLz48L2c+PC9nPjwvc3ZnPg==");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-position-x: 95%;
+        background-size: 13px;
+        padding: 7px;
+        border: 2px solid $black;
+        border-radius: 5px;
+        width: 100%;
+    }
+    @include responsive($sm){
+        order: 2;
+        margin-top: 20px;
+    }
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+thead{
+    color: $white;
+    th{
+        text-align: start;
+        padding: 15px 10px;
+        background-color: $black;
+        border-right: 2px solid $white;
+        cursor: pointer;
+    }
+    th:last-child{
+        border: none;
+    }
+    th:nth-child(3){
+        cursor: default;
+    }
+}
+.earnings-col{
+    width: 30%;
+    p{
+        @include responsive($sm){
+            margin: 0;
+            max-width: 70%;
+        }
+    }
+}
+tbody{
+    tr{
+        border: none;
+        td{
+            padding: 15px 10px 25px;
+            vertical-align: top;
+        }
+        td:last-child{
+            text-align: end;
+        }
+    }
+    tr:nth-child(even){
+        background-color: $gray;
+    }
+}
+.table-title{
+    position: relative;
+    &:after{
+        content: "";
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0Ljc3IDExLjQ2Ij48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2YyZjJmMjt9PC9zdHlsZT48L2RlZnM+PGcgaWQ9ItCh0LvQvtC5XzIiIGRhdGEtbmFtZT0i0KHQu9C+0LkgMiI+PGcgaWQ9InRleHQiPjxwb2x5Z29uIGNsYXNzPSJjbHMtMSIgcG9pbnRzPSIyLjM4IDcuNjggNC43NyA3LjY4IDMuNTggOS41NyAyLjM4IDExLjQ2IDEuMTkgOS41NyAwIDcuNjggMi4zOCA3LjY4Ii8+PHBvbHlnb24gY2xhc3M9ImNscy0xIiBwb2ludHM9IjIuMzggMy43NyAwIDMuNzcgMS4xOSAxLjg5IDIuMzggMCAzLjU4IDEuODkgNC43NyAzLjc3IDIuMzggMy43NyIvPjwvZz48L2c+PC9zdmc+);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        width: 5px;
+        display: inline-block;
+        transition: .3s all ease;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0; 
+        cursor: pointer;
+    }
+}
+// Show(hide) button 
+
+#btnShowHide {
+	background-color: $black;
+	color: $white;
+	text-align: center;
+	cursor: pointer;
+    padding: 20px;
+}
+
+//Switch buttons
+.category-switch-buttons{
+    display: flex;
+    button{
+        border: 2px solid;
+        margin-right: 15px;
+        padding: 7px 15px;
+        border-radius: 20px;
+        transition: .3s all ease;
+        cursor: pointer;
+        color: $black;
+    }
+}
+#overallBtn{
+    border-color: $black;
+}
+#overallBtn.activeMode{
+    background-color: $black;
+    color: $white;
+}
+#gamingBtn{
+    border-color: $aqua;
+}
+#gamingBtn.activeMode{
+    background-color: $aqua;
+    color: $white;
+}
+#kidsBtn{
+    border-color: $pink;
+    margin: 0;
+}
+#kidsBtn.activeMode{
+    background-color: $pink;
+    color: $white;
+}
+
+//Responsive for mobiles
+.hidden-sm{
+    @include responsive($sm){
+        display: none;
+    }
+}
+.width-sm{
+    @include responsive($sm){
+        width: 25%;
+    }
+}
+[class^='sort-'], [class*=' sort-'] {
+    &::before{
+        content: "";
+        background-color: #282828;
+        width: 7px;
+        height: 7px;
+        position: absolute;
+        z-index: 2;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        margin: auto;
+        transform: translateY(5px);
+    }
+}
+
+.sort-asc {
+    &::before{
+        transform: translateY(-5px);
+    }
+}
