@@ -20,7 +20,7 @@ let dataMode = 'Overall'
 
 
 // Loading functions
-$(window).on('load',function() {
+$(window).on('load', function() {
     generateTableData()
 })
 
@@ -105,7 +105,6 @@ $("#btnShowHide").on('click',function(ev){
 	generateTableData()
 });
 
-
 //Category switch function
 
 $("#switchButtons button").on('click',function(ev) {
@@ -124,14 +123,14 @@ $('#search').on('keyup', function(){
 
 //Embed button
 
-$("#embedBtn").on('click',function(){
+$("#embedBtn").on('click', function(){
     $('#embedHolder').fadeIn("slow");
 	document.getElementById('embedBox').scrollIntoView({behavior: 'smooth'});
 });
-$("#crossEmbedBtn").on('click',function(){
+$("#crossEmbedBtn").on('click', function(){
     $('#embedHolder').fadeOut("slow");
 });
-$(document).keyup(function(e) {
+$(document).on('keyup', function(e) {
     if (e.key === "Escape") { 
        $('#embedHolder').fadeOut("slow");
      }
@@ -140,7 +139,7 @@ $("#copyBtn").on('click',function(){
     $('#embedCode').select();
 	document.execCommand('copy');
 });
-$(document).click(function(event) {
+$(document).on('click', function(event) {
     if (!$(event.target).closest("#embedBox, #embedBtn").length) {
         $('#embedHolder').fadeOut("slow");
     }
@@ -161,20 +160,20 @@ document.querySelector('#copyBtn').addEventListener('click' , ()=> {
 
 //Info button
 
-$("#infoBtn").on('click',function(){
+$("#infoBtn").on('click', function(){
     $('#infoHolder').fadeIn("slow");
 	document.getElementById("infoBox").scrollIntoView({behavior: 'smooth'});
 });
 
-$("#crossInfoBtn").on('click',function(){
+$("#crossInfoBtn").on('click', function(){
     $('#infoHolder').fadeOut("slow");
 });
-$(document).keyup(function(e) {
+$(document).on('keyup', function(e) {
     if (e.key === "Escape") { 
        $('#infoHolder').fadeOut("slow");
      }
 });
-$(document).click(function(event) {
+$(document).on('click', function(event) {
     if (!$(event.target).closest("#infoBox, #infoBtn").length) {
         $('#infoHolder').fadeOut("slow");
     }

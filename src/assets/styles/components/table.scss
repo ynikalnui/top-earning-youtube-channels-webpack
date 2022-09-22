@@ -57,6 +57,16 @@ thead{
         }
     }
 }
+#earningsCol.sort-asc {
+    &::before{
+        transform: translateY(5px);
+    }
+}
+#earningsCol.sort-desc {
+    &::before{
+        transform: translateY(-5px);
+    }
+}
 tbody{
     tr{
         border: none;
